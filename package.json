@@ -1,4 +1,7 @@
-  {
+  "devDependencies": { 
+    "jest-junit": "^15.0.0" 
+} 
+{
     "name": "ucp-app",
     "version": "0.1.0",
     "private": true,
