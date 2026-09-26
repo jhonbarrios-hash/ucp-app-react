@@ -9,8 +9,7 @@ ipeline {
        // Etapa 1: Checkout del código desde GitHub 
        stage('Checkout') { 
            steps { 
-               git branch: 'main', url: 
-'https://github.com/amartinezh/ucp-app-react.git' 
+               git branch: 'main', url: 'https://github.com/jhonbarrios-hash/ucp-app-react.git' 
            } 
        } 
  
@@ -25,8 +24,7 @@ ipeline {
        // Etapa 3: Ejecutar pruebas unitarias 
        stage('Unit Tests') { 
            steps { 
-               sh 'npm test -- --watchAll=false --silent > test-output.txt 
-|| true' // Ejecuta pruebas sin modo interactivo 
+               sh 'npm test -- --watchAll=false --silent > test-output.txt || true' // Ejecuta pruebas sin modo interactivo 
                // Muestra el reporte simple en la consola 
                sh 'cat test-output.txt' 
            } 
